@@ -1,5 +1,5 @@
-param location string = 'singapore'
-param registry_name string = 'Leonardo_registry_container'
+param location string = 'Poland Central'
+param registry_name string = 'jwendtcr'
 param acrAdminUserEnabled bool = true
 
 module registry './modules/container-registry/registry/main.bicep' = {
@@ -11,3 +11,4 @@ module registry './modules/container-registry/registry/main.bicep' = {
     acrAdminUserEnabled: acrAdminUserEnabled
   }
 }
+
