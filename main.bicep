@@ -1,12 +1,12 @@
-param location string = 'Poland Central'
-param registry_name string = 'jwendtcr'
+param location string
+param containerRegistryName string
 param acrAdminUserEnabled bool = true
 
 module registry './modules/container-registry/registry/main.bicep' = {
   name: '${uniqueString(deployment().name, location)}-test-crrmin'
   params: {
     // Required parameters
-    name: registry_name
+    name: containerRegistryName
     location: location
     acrAdminUserEnabled: acrAdminUserEnabled
   }
